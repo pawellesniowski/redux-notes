@@ -7,18 +7,14 @@ We have one huge store, which holds the whole app state.
   npm i --save redux react-redux
 
 ## Steps to set redux:
-   Create file constans.js in src.
-      const DO_SOMETHING = "DO_SOMETHING"
-   Action (plain object)
-      {
-        type: DO_SOMETHING, // imported from constans.js
-        payload: 
-      }
-   Action Creator (function which returns Action)
-      function(){
-        return {
+   1. Create const in src/constans.js
+      export const DO_SOMETHING = "DO_SOMETHING"
+   2. Create Action Creator (function which returns Action), in src/actions/index.js .
+      export const addReminder = ()=>{
+        const action = {
           type: DO_SOMETHING,
-          payload:
+          text           
         }
+        return action;
       }
   3.
