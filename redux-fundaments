@@ -1,20 +1,28 @@
 
-## The first princile of Redux is to represent the whole state of your app as a single javascript object. 
-We have one huge store, which holds the whole app state. 
-## 
 
-## Instalation in app
+## Instalation 
   npm i --save redux react-redux
 
 ## Steps to set redux:
-   1. Create const in src/constans.js
+  0. Initializing global store in index.js file. 
+      ...
+      import { Provider } from 'react-redux';
+      import { createStore } from 'redux';
+      
+      const store = createStore(// root reducer //)
+      
+      ReactDOM.render(
+        <Provider> 
+          ...
+  1. Create const in src/constans.js
       export const DO_SOMETHING = "DO_SOMETHING"
-   2. Create Action Creator (function which returns Action), in src/actions/index.js .
+  2. Create Action Creator (function which returns Action), in src/actions/index.js .
       export const addReminder = ()=>{
         const action = {
           type: DO_SOMETHING,
           text           
         }
+        console.log("action from action creator: ", action);
         return action;
       }
-  3.
+ 3.
