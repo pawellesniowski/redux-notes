@@ -25,4 +25,6 @@
         console.log("action from action creator: ", action);
         return action;
       }
- 3.
+ 3. Reducer takes an action and the state and return new state. So reducers modyfy state in pure way. 
+    Create folder and file:  src/reducers/index.js
+
